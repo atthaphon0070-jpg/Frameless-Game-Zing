@@ -321,7 +321,10 @@ img{display:block;max-width:none}
   background:linear-gradient(105deg,transparent 42%,rgba(255,255,255,.95) 50%,transparent 58%) no-repeat;background-size:260% 100%;background-position:160% 0;
   -webkit-background-clip:text;background-clip:text;animation:shineT 5s ease-in-out calc(2.2s + var(--si,0) * .07s) infinite}
 @keyframes shineT{0%{background-position:160% 0}30%,100%{background-position:-70% 0}}
-.s1 .title{display:flex;align-items:flex-end}
+.s1 .title{display:block}
+.s1 .title .trow{display:flex;align-items:flex-end;height:148px;line-height:.95}
+.s1 .title .lt{line-height:.95}
+.s1 .title .trow+.trow{margin-top:6px}
 .s1 .title .lt{display:inline-block;margin-right:5px}
 .s1 .title .gap{display:inline-block;width:30px}
 .s1 .title .lt:hover{animation:none}
@@ -329,7 +332,7 @@ img{display:block;max-width:none}
   clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%);filter:drop-shadow(0 0 6px #FFE66E);
   animation:twk 2.6s ease-in-out var(--sd,0s) infinite}
 @keyframes twk{0%,100%{transform:scale(0) rotate(0);opacity:0}45%{transform:scale(1) rotate(90deg);opacity:1}70%{transform:scale(.2) rotate(140deg);opacity:0}}
-.logo-sub{position:absolute;left:100px;top:428px;font-family:var(--fg);font-size:22px;letter-spacing:.42em;color:#BDEBFF;text-shadow:0 3px 0 rgba(0,0,0,.45)}
+.logo-sub{position:absolute;left:100px;top:446px;font-family:var(--fg);font-size:22px;letter-spacing:.42em;color:#BDEBFF;text-shadow:0 3px 0 rgba(0,0,0,.45)}
 
 /* HUD microanimations */
 .hud-brand .coin{animation:spin 2.6s ease-in-out infinite}
@@ -365,13 +368,13 @@ img{display:block;max-width:none}
 .s1 .producer{position:absolute;left:96px;top:140px;display:flex;align-items:center;gap:16px;font-family:var(--fg);font-size:34px;letter-spacing:.14em;color:#fff;text-shadow:0 4px 0 rgba(0,0,0,.35)}
 .s1 .producer small{font-size:22px;color:var(--yellow);letter-spacing:.3em}
 .s1 .producer .bar{width:70px;height:8px;background:var(--yellow);border-radius:4px;box-shadow:0 4px 0 rgba(0,0,0,.3)}
-.s1 .title{position:absolute;left:86px;top:200px;font-size:190px}
+.s1 .title{position:absolute;left:86px;top:132px;font-size:148px}
 .s1 .title .t3d+.t3d{margin-left:34px}
-.s1 .ribbon{position:absolute;left:96px;top:478px;display:inline-flex;align-items:center;gap:16px;padding:14px 30px 14px 22px;border-radius:20px;
+.s1 .ribbon{position:absolute;left:96px;top:494px;display:inline-flex;align-items:center;gap:16px;padding:14px 30px 14px 22px;border-radius:20px;
   background:linear-gradient(180deg,#FF7A8D,#FF6278);border:4px solid #fff;box-shadow:0 8px 0 #b8344a,0 18px 30px rgba(0,0,0,.3);
   font-family:var(--fd);font-weight:800;font-size:46px;color:#fff;text-shadow:0 3px 0 rgba(0,0,0,.2)}
 .s1 .ribbon b{color:var(--yellow);font-weight:800}
-.s1 .entre{position:absolute;left:96px;top:606px;width:930px;padding:26px 34px 26px;}
+.s1 .entre{position:absolute;left:96px;top:620px;width:930px;padding:26px 34px 26px;}
 .s1 .entre .who{display:flex;align-items:baseline;gap:18px;padding-bottom:14px;border-bottom:3px dashed #d2e3f5;margin-bottom:12px}
 .s1 .entre .who small{font-size:26px;font-weight:600;color:#5a6f92}
 .s1 .entre .who b{font-family:var(--fd);font-weight:800;font-size:50px;color:var(--navy);line-height:1.2}
@@ -941,9 +944,8 @@ img{display:block;max-width:none}
   <div class="cloud" style="left:860px;top:110px;--sc:.7;--t:42s;--dx:160px;opacity:.7"></div>
   
 
-  <div class="producer" data-fx="down" style="--d:.5s"><span class="bar"></span>FRAMELESS GAME ZING <small>PRESENTS</small></div>
-  <div class="title"><span class="lt" data-fx="drop" style="--d:0.85s"><span class="t3d" data-text="M" style="--si:0">M</span></span><span class="lt" data-fx="drop" style="--d:0.92s"><span class="t3d" data-text="O" style="--si:1">O</span></span><span class="lt" data-fx="drop" style="--d:0.99s"><span class="t3d" data-text="N" style="--si:2">N</span></span><span class="lt" data-fx="drop" style="--d:1.06s"><span class="t3d" data-text="E" style="--si:3">E</span></span><span class="lt" data-fx="drop" style="--d:1.13s"><span class="t3d" data-text="Y" style="--si:4">Y</span></span><span class="gap"></span><span class="lt" data-fx="drop" style="--d:1.20s"><span class="t3d blue" data-text="C" style="--si:5">C</span></span><span class="lt" data-fx="drop" style="--d:1.27s"><span class="t3d blue" data-text="I" style="--si:6">I</span></span><span class="lt" data-fx="drop" style="--d:1.34s"><span class="t3d blue" data-text="T" style="--si:7">T</span></span><span class="lt" data-fx="drop" style="--d:1.41s"><span class="t3d blue" data-text="Y" style="--si:8">Y</span></span></div>
-  <div class="logo-sub" data-fx="fade" style="--d:1.7s">EDUCATIONAL ROLEPLAY GAME · ROBLOX</div>
+  <div class="title"><div class="trow"><span class="lt" data-fx="drop" style="--d:0.60s"><span class="t3d" data-text="F" style="--si:0">F</span></span><span class="lt" data-fx="drop" style="--d:0.66s"><span class="t3d" data-text="R" style="--si:1">R</span></span><span class="lt" data-fx="drop" style="--d:0.72s"><span class="t3d" data-text="A" style="--si:2">A</span></span><span class="lt" data-fx="drop" style="--d:0.78s"><span class="t3d" data-text="M" style="--si:3">M</span></span><span class="lt" data-fx="drop" style="--d:0.84s"><span class="t3d" data-text="E" style="--si:4">E</span></span><span class="lt" data-fx="drop" style="--d:0.90s"><span class="t3d" data-text="L" style="--si:5">L</span></span><span class="lt" data-fx="drop" style="--d:0.96s"><span class="t3d" data-text="E" style="--si:6">E</span></span><span class="lt" data-fx="drop" style="--d:1.02s"><span class="t3d" data-text="S" style="--si:7">S</span></span><span class="lt" data-fx="drop" style="--d:1.08s"><span class="t3d" data-text="S" style="--si:8">S</span></span></div><div class="trow"><span class="lt" data-fx="drop" style="--d:1.14s"><span class="t3d blue" data-text="G" style="--si:9">G</span></span><span class="lt" data-fx="drop" style="--d:1.20s"><span class="t3d blue" data-text="A" style="--si:10">A</span></span><span class="lt" data-fx="drop" style="--d:1.26s"><span class="t3d blue" data-text="M" style="--si:11">M</span></span><span class="lt" data-fx="drop" style="--d:1.32s"><span class="t3d blue" data-text="E" style="--si:12">E</span></span><span class="gap"></span><span class="lt" data-fx="drop" style="--d:1.44s"><span class="t3d blue" data-text="Z" style="--si:14">Z</span></span><span class="lt" data-fx="drop" style="--d:1.50s"><span class="t3d blue" data-text="I" style="--si:15">I</span></span><span class="lt" data-fx="drop" style="--d:1.56s"><span class="t3d blue" data-text="N" style="--si:16">N</span></span><span class="lt" data-fx="drop" style="--d:1.62s"><span class="t3d blue" data-text="G" style="--si:17">G</span></span></div></div>
+  <div class="logo-sub" data-fx="fade" style="--d:1.7s">CREATOR OF MONEY CITY · ROBLOX EDUCATIONAL GAME</div>
   <i class="spk" style="left:150px;top:215px;--sd:2.4s"></i><i class="spk" style="left:640px;top:200px;--sd:3.1s;width:28px;height:28px"></i><i class="spk" style="left:1150px;top:250px;--sd:2.8s"></i><i class="spk" style="left:930px;top:380px;--sd:3.6s;width:24px;height:24px"></i><i class="spk" style="left:420px;top:390px;--sd:4.1s;width:26px;height:26px"></i>
   <div class="ribbon" data-fx="pop" style="--d:1.5s">รายงานผลการบ่มเพาะ รอบ 20 เดือน <b>(ปิดโครงการ)</b></div>
 
